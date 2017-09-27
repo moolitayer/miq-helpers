@@ -2,7 +2,8 @@
 
 def load_rails # TODO: extract to script
   ENV['RAILS_ENV'] = ARGV[0] || 'development'
-  require './config/environment'
+  miq_path = ENV['MIQ_DIR'] || '.'
+  require "#{miq_path}/config/environment"
 end
 
 # --------------------
